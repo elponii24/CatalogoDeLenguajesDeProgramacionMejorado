@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeCursos | Catálogo de cursos de programación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CodeCursos</a>
+    <button id="cart-toggle" class="btn btn-secondary" type="button" aria-controls="cart" aria-expanded="false">
+      Carrito <span id="cart-count" class="badge-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Aprende un lenguaje de programación</h1>
+      <p>Elige un curso, agrégalo al carrito y revisa tu selección antes de inscribirte.</p>
+    </section>
+
+    <section aria-label="Filtros">
+      <div id="filters" class="filters" role="group" aria-label="Filtrar cursos por categoría"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <h2 class="sr-only">Cursos disponibles</h2>
+    <section id="grid" class="grid" aria-label="Lista de cursos"></section>
+  </main>
+
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="cart" class="cart" aria-label="Carrito de cursos" hidden>
+    <div class="cart-head">
+      <h2>Tu carrito</h2>
+      <button id="cart-close" class="btn btn-secondary" type="button">Cerrar</button>
+    </div>
+    <ul id="cart-list" class="cart-list"></ul>
+    <p id="cart-empty" class="cart-empty">Aún no agregaste cursos. Usa el botón “Agregar al carrito” en cualquier curso disponible.</p>
+    <div class="cart-foot">
+      <p class="total">Total: <strong id="cart-total">$0</strong></p>
+      <button id="checkout" class="btn btn-primary" type="button" disabled>Inscribirme (simulado)</button>
+      <button id="clear" class="btn btn-secondary" type="button" disabled>Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
